@@ -338,7 +338,7 @@ const stands = [
   { id: '07', nom: 'Tir laser', categorie: 'activites', description: 'Découverte du tir laser encadrée, accessible aux enfants et aux adultes.', lat: 45.101871, lng: 5.680455 },
   { id: '08', nom: 'Vision nocturne', categorie: 'activites', description: 'Découverte encadrée de jumelles et dispositifs de vision nocturne.', lat: 45.102931, lng: 5.678959 },
   { id: '09', nom: 'Recherche DVA', categorie: 'activites', description: 'Démonstration de recherche de victimes d’avalanche à l’aide de détecteurs DVA.', lat: 45.103216, lng: 5.679662 },
-  // EXPOSITIONS (10–24)
+  // EXPOSITIONS (10–23)
   { id: '10', nom: 'Présentation matériels', categorie: 'expositions', description: 'Présentation statique des principaux matériels et véhicules du régiment.', lat: 45.101459, lng: 5.681704 },
   { id: '11', nom: 'Aubade des troupes de montagne', categorie: 'expositions', description: 'Fanfare militaire des troupes de montagne.', lat: 45.101707, lng: 5.681779 },
   { id: '12', nom: 'Cellule d\'appui au recrutement', categorie: 'expositions', description: 'Informations sur les parcours d\'engagement, d\'active et de réserve, au sein du 93e RAM.', lat: 45.101432, lng: 5.681467 }, 
@@ -353,7 +353,7 @@ const stands = [
   { id: '21', nom: 'Drones', categorie: 'expositions', description: 'Présentation des drones du régiment.', lat: 45.102046, lng: 5.680004 },
   { id: '22', nom: 'Matériel montagne', categorie: 'expositions', description: 'Présentation des équipements utilisés pour les missions en environnement montagneux.', lat: 45.103207, lng: 5.679476 },
   { id: '23', nom: 'PC sécurité', categorie: 'services', description: 'Contact d\'urgence : 04.56.85.75.21', lat: 45.101763, lng: 5.681794 },
-  // SERVICES (24–30)
+  // SERVICES (24–29)
   { id: '24', nom: 'Banque', categorie: 'services', description: 'Point de paiement, achat de tickets et renseignements pratiques.', lat: 45.102144, lng: 5.681463 },
   { id: '25', nom: 'Banque', categorie: 'services', description: 'Point de paiement, achat de tickets et renseignements pratiques.', lat: 45.102198, lng: 5.679853 },
   { id: '26', nom: 'Restauration', categorie: 'services', description: 'Restauration, boissons et places assises pour les visiteurs.', lat: 45.101448, lng: 5.679728 },
@@ -392,7 +392,7 @@ const map = L.map('map', {
   maxZoom: 19,
 });
 
-L.tileLayer(''https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
+L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
   attribution: '',
   subdomains: 'abcd',
   maxZoom: 19,
