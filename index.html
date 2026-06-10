@@ -230,6 +230,7 @@
       font-size: 12px;
       font-weight: 700;
       line-height: 1.2;
+      color: var(--text);
     }
     .stand-popup-cat {
       font-size: 9px;
@@ -505,7 +506,7 @@ stands.forEach(stand => {
   }).addTo(map);
 
   marker.on('click', () => {
-    map.setView([stand.lat, stand.lng], Math.max(map.getZoom(), 17), { animate: true });
+    map.setView([stand.lat, stand.lng], Math.max(map.getZoom(), 18), { animate: true });
     setTimeout(() => openStandPopup(stand), 300);
   });
 
