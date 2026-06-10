@@ -295,6 +295,7 @@
   <h1>Journée Portes Ouvertes<br>du 93<sup style="font-size: 0.6em;">e</sup> RAM</h1>
   <div class="legend">
     <div class="legend-item"><div class="legend-dot" style="background:var(--cat-activites)"></div>Activités</div>
+    <div class="legend-item"><div class="legend-dot" style="background:var(--cat-activites1e)"></div>Activités 1€</div>
     <div class="legend-item"><div class="legend-dot" style="background:var(--cat-expositions)"></div>Expositions</div>
     <div class="legend-item"><div class="legend-dot" style="background:var(--cat-services)"></div>Services</div>
   </div>
@@ -307,6 +308,9 @@
     <button class="tab-btn active" data-cat="activites" onclick="switchTab('activites')">
       <span class="tab-dot" style="background:var(--cat-activites)"></span>Activités
     </button>
+    <button class="tab-btn active" data-cat="activites1e" onclick="switchTab('activites1e')">
+      <span class="tab-dot" style="background:var(--cat-activites)"></span>Activités 1€
+    </button>
     <button class="tab-btn" data-cat="expositions" onclick="switchTab('expositions')">
       <span class="tab-dot" style="background:var(--cat-expositions)"></span>Expositions
     </button>
@@ -314,6 +318,7 @@
       <span class="tab-dot" style="background:var(--cat-services)"></span>Services
     </button>
   </div>
+  <div id="tab-activites"   class="tab-content active"></div>
   <div id="tab-activites"   class="tab-content active"></div>
   <div id="tab-expositions" class="tab-content"></div>
   <div id="tab-services"    class="tab-content"></div>
@@ -329,14 +334,14 @@ const MAX_RADIUS_M = 300;
 
 const stands = [
   // ACTIVITÉS (01–09)
-  { id: '01', nom: 'Parcours d\'obstacle', categorie: 'activites', description: 'Parcours avec franchissements, équilibre et coordination.', lat: 45.103456, lng: 5.679386 },
+  { id: '01', nom: 'Parcours d\'obstacle', categorie: 'activites1e', description: 'Parcours avec franchissements, équilibre et coordination.', lat: 45.103456, lng: 5.679386 },
   { id: '02', nom: 'Chamboule tout', categorie: 'activites', description: 'Jeux d\'adresse où tu dois renverser une pile de boîtes avec une balle.', lat: 45.101608, lng: 5.680824 }, 
   { id: '03', nom: 'Jeux de bois', categorie: 'activites', description: 'Espace ludique proposant des jeux traditionnels d\'adresse et de précision en bois.', lat: 45.101625, lng: 5.680824 },
-  { id: '04', nom: 'Circuit en véhicule militaire', categorie: 'activites', description: 'Parcours à bord de véhicules militaires sur un circuit aménagé.', lat: 45.102659, lng: 5.678801 },
+  { id: '04', nom: 'Circuit en véhicule militaire', categorie: 'activites1e', description: 'Parcours à bord de véhicules militaires sur un circuit aménagé.', lat: 45.102659, lng: 5.678801 },
   { id: '05', nom: 'Château gonflable', categorie: 'activites', description: 'Espace ludique réservé aux enfants, sous surveillance.', lat: 45.101716, lng: 5.680131 }, 
   { id: '06', nom: 'Escalade', categorie: 'activites', description: 'Mur d\'escalade avec baudrier et accompagnement par moniteurs.', lat: 45.103182, lng: 5.678819 },
-  { id: '07', nom: 'Tir laser', categorie: 'activites', description: 'Découverte du tir laser encadrée, accessible aux enfants et aux adultes.', lat: 45.101844, lng: 5.680244 },
-  { id: '08', nom: 'Vision nocturne', categorie: 'activites', description: 'Découverte encadrée de jumelles et dispositifs de vision nocturne.', lat: 45.102931, lng: 5.678959 },
+  { id: '07', nom: 'Tir laser', categorie: 'activites1e', description: 'Découverte du tir laser encadrée, accessible aux enfants et aux adultes.', lat: 45.101844, lng: 5.680244 },
+  { id: '08', nom: 'Vision nocturne', categorie: 'activites1e', description: 'Découverte encadrée de jumelles et dispositifs de vision nocturne.', lat: 45.102931, lng: 5.678959 },
   { id: '09', nom: 'Recherche DVA', categorie: 'activites', description: 'Démonstration de recherche de victimes d’avalanche à l’aide de détecteurs DVA.', lat: 45.103216, lng: 5.679662 },
   // EXPOSITIONS (10–23)
   { id: '10', nom: 'Présentation matériels', categorie: 'expositions', description: 'Présentation statique des principaux matériels et véhicules du régiment.', lat: 45.101459, lng: 5.681704 },
