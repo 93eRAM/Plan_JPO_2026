@@ -391,7 +391,7 @@ const map = L.map('map', {
   maxZoom: 19,
 });
 
-L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
+L.tileLayer(''https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
   attribution: '',
   subdomains: 'abcd',
   maxZoom: 19,
@@ -543,7 +543,7 @@ map.on('click', e => {
       <div class="stand-num">#${stand.id}</div>`;
     div.addEventListener('click', () => {
       // D'abord zoom out pour voir tout, puis zoom sur le stand
-      map.setView(CENTER, 15, { animate: true });
+      map.setView(CENTER, 16, { animate: true });
       setTimeout(() => {
         map.setView([stand.lat, stand.lng], 18, { animate: true });
         setTimeout(() => openStandPopup(stand), 500);
