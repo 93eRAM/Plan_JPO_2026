@@ -307,9 +307,6 @@
     <button class="tab-btn active" data-cat="activites" onclick="switchTab('activites')">
       <span class="tab-dot" style="background:var(--cat-activites)"></span>Activités
     </button>
-    <button class="tab-btn active" data-cat="activites1e" onclick="switchTab('activites')">
-      <span class="tab-dot" style="background:var(--cat-activites)"></span>Activités
-    </button>
     <button class="tab-btn" data-cat="expositions" onclick="switchTab('expositions')">
       <span class="tab-dot" style="background:var(--cat-expositions)"></span>Expositions
     </button>
@@ -467,8 +464,9 @@ function openStandPopup(stand) {
   // Switch tab if needed
   if (li) {
     const currentTab = document.querySelector('.tab-content.active');
-    if (!currentTab || currentTab.id !== 'tab-' + stand.categorie) {
-      switchTab(stand.categorie, false);
+    const tabCat = stand.categorie.replace('1e', '');
+if (!currentTab || currentTab.id !== 'tab-' + tabCat) {
+  switchTab(tabCat, false);
       li.scrollIntoView({ block: 'nearest', behavior: 'smooth' });
     }
   }
@@ -536,7 +534,7 @@ map.on('click', e => {
 // ═══════════════════════════════════════
 ['activites', 'expositions', 'services'].forEach(cat => {
   const container = document.getElementById('tab-' + cat);
-  stands.filter(s => s.categorie === cat).forEach(stand => {
+  stands.filter(s => s.categorie === cat || s.categorie === cat + '1e').forEach(stand => {
     const color = COLORS[stand.categorie];
     const div = document.createElement('div');
     div.className = 'stand-item';
