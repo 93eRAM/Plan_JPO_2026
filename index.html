@@ -2,7 +2,7 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
   <title>Journée Portes Ouvertes du 93e RAM</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -40,13 +40,13 @@
 
     /* ── HEADER ── */
     header {
-      height: var(--header-h);
+      height: calc(var(--header-h) + env(safe-area-inset-top));
       background: var(--surface);
       border-bottom: 1px solid var(--border);
       display: flex;
       align-items: center;
       justify-content: space-between;
-      padding: 0 16px;
+      padding: env(safe-area-inset-top) 16px 0 16px;
       flex-shrink: 0;
       z-index: 100;
     }
